@@ -31,9 +31,10 @@
             // 
             // precompiled
             // 
-            this.precompiled.Location = new System.Drawing.Point(21, 12);
+            this.precompiled.Location = new System.Drawing.Point(56, 29);
+            this.precompiled.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.precompiled.Name = "precompiled";
-            this.precompiled.Size = new System.Drawing.Size(99, 23);
+            this.precompiled.Size = new System.Drawing.Size(264, 55);
             this.precompiled.TabIndex = 0;
             this.precompiled.Text = "Run Compiled";
             this.precompiled.UseVisualStyleBackColor = true;
@@ -41,18 +42,23 @@
             // 
             // webBrowser1
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(12, 41);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.webBrowser1.Location = new System.Drawing.Point(32, 98);
+            this.webBrowser1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(53, 48);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(635, 447);
+            this.webBrowser1.Size = new System.Drawing.Size(1693, 1066);
             this.webBrowser1.TabIndex = 1;
             // 
             // run
             // 
             this.run.AutoEllipsis = true;
-            this.run.Location = new System.Drawing.Point(142, 12);
+            this.run.Location = new System.Drawing.Point(379, 29);
+            this.run.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.run.Name = "run";
-            this.run.Size = new System.Drawing.Size(99, 23);
+            this.run.Size = new System.Drawing.Size(264, 55);
             this.run.TabIndex = 2;
             this.run.Text = "Run";
             this.run.UseVisualStyleBackColor = true;
@@ -61,9 +67,10 @@
             // runPdf
             // 
             this.runPdf.AutoEllipsis = true;
-            this.runPdf.Location = new System.Drawing.Point(261, 12);
+            this.runPdf.Location = new System.Drawing.Point(696, 29);
+            this.runPdf.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.runPdf.Name = "runPdf";
-            this.runPdf.Size = new System.Drawing.Size(99, 23);
+            this.runPdf.Size = new System.Drawing.Size(264, 55);
             this.runPdf.TabIndex = 3;
             this.runPdf.Text = "Run PDF";
             this.runPdf.UseVisualStyleBackColor = true;
@@ -71,13 +78,14 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(649, 487);
+            this.ClientSize = new System.Drawing.Size(1731, 1161);
             this.Controls.Add(this.runPdf);
             this.Controls.Add(this.run);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.precompiled);
+            this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);

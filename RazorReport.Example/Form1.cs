@@ -23,7 +23,8 @@ namespace RazorReport.Example {
             precompilingBuilder = ReportBuilder<Example>.Create ("modelReport")
                 .WithCssFromResource ("RazorReport.Example.Style.css", assembly)
                 .WithTemplateFromResource ("RazorReport.Example.ExampleTemplate.htm", assembly)
-                .WithPrecompilation ();
+                .WithPrecompilation ()
+                .WithCustomRenderer(new PdfRenderer());
         }
 
 
@@ -50,9 +51,9 @@ namespace RazorReport.Example {
         }
 
         byte[] RunPdf () {
-            var model = new Example { Name = "Alex", Email = "test@example.com", Values = new Dictionary<object, object> { { "Compiled", "No" }, { "Worked", "Yes" } }, Image = GetTestImage() };
+            var model = new Example { Name = "Alex", Email = "test@example.com", Values = new Dictionary<object, object> { { "Compiled", "Yes" }, { "Worked", "Yes" } }, Image = GetTestImage() };
 
-            return builder.BuildCustomRendering (model);
+            return precompilingBuilder.BuildCustomRendering (model);
         }
 
         private void runCompiled_Click (object sender, EventArgs e) {

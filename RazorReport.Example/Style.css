@@ -6,7 +6,8 @@
 table
 {
     border-width: 1px;
-    border-spacing: 2px border-style: outset;
+    border-spacing: 2px;
+    border-style: outset;
     border-color: gray;
     border-collapse: collapse;
     background-color: white;

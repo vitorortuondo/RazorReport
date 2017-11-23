@@ -1,11 +1,14 @@
 ﻿using System;
 using RazorEngine.Templating;
 using RazorEngine.Text;
+using System.Security;
 
 namespace RazorReport.Example {
+
     public class RazorTemplateBase<T> : TemplateBase<T> {
         public IEncodedString DocType {
-            get { return Raw(@"<!DOCTYPE HTML PUBLIC ""-//W3C//DTD HTML 4.0 Transitional//EN"">"); }
+//            get { return Raw(@"<!DOCTYPE HTML PUBLIC ""-//W3C//DTD HTML 4.0 Transitional//EN"">"); }
+            get { return Raw(@""); }
         }
 
         public IEncodedString DataImage(byte[] image, string altText = "image") {

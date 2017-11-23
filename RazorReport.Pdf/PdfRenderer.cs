@@ -1,22 +1,21 @@
 ﻿using System.IO;
 using iTextSharp.text;
-using iTextSharp.text.html.simpleparser;
+using iTextSharp.tool.xml;
+using iTextSharp.text.pdf;
 
 namespace RazorReport.Pdf {
     public class PdfRenderer : ICustomRenderer {
         public byte[] RenderFromHtml (string html) {
             var output = new MemoryStream ();
             using (var reader = new StringReader (html)) {
+
                 var document = new Document ();
-                var worker = new HTMLWorker (document);
+                var writer = PdfWriter.GetInstance(document, output);
+                writer.SetTagged();
 
-                document.Open ();
-                worker.StartDocument ();
-                worker.Parse (reader);
-
-                worker.EndDocument ();
-                worker.Close ();
-                document.Close ();
+                document.Open();
+                XMLWorkerHelper.GetInstance().ParseXHtml(writer, document, reader);
+                document.Close();
 
                 return output.ToArray ();
             }
